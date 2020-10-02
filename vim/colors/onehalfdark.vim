@@ -25,6 +25,7 @@ let s:blue        = { "gui": "#61afef", "cterm": "75"  }
 let s:purple      = { "gui": "#c678dd", "cterm": "176" }
 let s:cyan        = { "gui": "#56b6c2", "cterm": "73"  }
 let s:white       = { "gui": "#dcdfe4", "cterm": "188" }
+let s:gray        = { "gui": "#464a51", "cterm": "240" }
 
 let s:fg          = s:white
 let s:bg          = s:black
@@ -70,10 +71,10 @@ call s:h("CursorLine", "", s:cursor_line, "")
 call s:h("LineNr", s:gutter_fg, s:gutter_bg, "")
 call s:h("CursorLineNr", s:fg, "", "")
 
-call s:h("DiffAdd", s:green, "", "")
-call s:h("DiffChange", s:yellow, "", "")
-call s:h("DiffDelete", s:red, "", "")
-call s:h("DiffText", s:blue, "", "")
+call s:h("DiffAdd", "", s:green, "")
+call s:h("DiffChange", "", s:gray, "")
+call s:h("DiffDelete", "", s:red, "")
+call s:h("DiffText", s:purple, s:gray, "italic")
 
 call s:h("IncSearch", s:bg, s:yellow, "")
 call s:h("Search", s:bg, s:yellow, "")
